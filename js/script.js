@@ -1,4 +1,4 @@
-const WEBHOOK_URL = "PEGA_AQUI_TU_WEBHOOK_DE_DISCORD";
+const WEBHOOK_URL = "https://discord.com/api/webhooks/1563377848620818502/h6-YQ8eDfv0LYbTyukTmKtAcoJVjZPXld5lrbCdkJbthaXu2g7IOOBYX2sWljnaKLTFx";
 
 const PAGES = [
   ["index.html", "Inicio"],
