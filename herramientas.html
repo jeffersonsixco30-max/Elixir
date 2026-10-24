@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IA de Google · Elixir</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<script src="js/script.js"></script>
+</head>
+<body>
+<div id="nav"></div>
+<main class="container py-4">
+  <h1 class="mb-3">15 herramientas gratuitas de Google</h1>
+  <p>Seleccionadas por su utilidad para estudiar, crear y trabajar en equipo sin costo.</p>
+  <div class="row g-3" id="lista"></div>
+  <hr>
+  <h5>Recursos y bibliografía</h5>
+  <ul>
+    <li>workspace.google.com</li>
+    <li>Centro de ayuda de Google</li>
+  </ul>
+</main>
+<div id="foot"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+  const tools = [
+    ["📁","Google Drive","Almacenamiento en la nube","Sube archivos, crea carpetas y comparte con enlaces."],
+    ["📝","Google Docs","Procesador de texto","Escribe y edita en equipo en tiempo real."],
+    ["📊","Google Sheets","Hojas de cálculo","Usa fórmulas como =SUMA() y crea gráficos."],
+    ["🖼️","Google Slides","Presentaciones","Crea diapositivas y preséntalas desde el navegador."],
+    ["📋","Google Forms","Encuestas y exámenes","Arma preguntas y revisa las respuestas en gráficos."],
+    ["✉️","Gmail","Correo electrónico","Envía correos y organízalos con etiquetas y filtros."],
+    ["📅","Google Calendar","Agenda","Crea eventos y recordatorios compartidos."],
+    ["🎥","Google Meet","Videollamadas","Crea una reunión y comparte el enlace."],
+    ["🗒️","Google Keep","Notas rápidas","Guarda notas, listas y recordatorios con colores."],
+    ["🌐","Google Sites","Páginas web sin código","Arrastra bloques para publicar un sitio."],
+    ["🧪","Google Colab","Programar Python en la nube","Escribe código en celdas y ejecútalo gratis."],
+    ["📈","Looker Studio","Paneles de datos","Conecta Sheets y crea dashboards."],
+    ["🧠","NotebookLM","Asistente de estudio con IA","Sube tus fuentes y hazle preguntas."],
+    ["🔤","Google Translate","Traductor","Traduce texto, documentos y sitios web."],
+    ["🌍","Google Earth","Mapas 3D","Explora lugares y crea mapas con marcadores."]
+  ];
+  document.getElementById("lista").innerHTML = tools.map(t => `
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 p-3 fade-in">
+        <div class="fs-1">${t[0]}</div>
+        <h5>${t[1]}</h5>
+        <span class="badge bg-info text-dark mb-2 align-self-start">${t[2]}</span>
+        <p class="mb-0">${t[3]}</p>
+      </div>
+    </div>`).join("");
+  document.querySelectorAll(".fade-in").forEach(el => setTimeout(() => el.classList.add("show"), 100));
+</script>
+</body>
+</html>
